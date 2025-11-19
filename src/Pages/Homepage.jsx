@@ -1,4 +1,5 @@
 import { FiHeart } from "react-icons/fi";
+import Girlimage from "../assets/Homepage/Girlimage.png";
 
 export default function Homepage() {
   const products = [
@@ -14,34 +15,35 @@ export default function Homepage() {
       {/* ----------------------------------------------------
           HERO SECTION
       ----------------------------------------------------- */}
-      <div className="w-full bg-secondary py-12 px-6 md:px-16">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+      <div className="w-full bg-secondary py-12 px-4  ">
+        <div className=" w-full grid grid-cols-1 md:grid-cols-2 items-center gap-10 mx-auto px-10 ">
           
           {/* Left Side */}
           <div>
-            <h1 className="text-4xl font-bold text-pink-800 leading-snug">
+            <h1 className="text-5xl font-bold text-primary leading-snug">
               Where Love Blooms<br />
               Into Unforgettable<br />
               Memories.
             </h1>
 
-            <p className="mt-4 text-pink-700">
-              Explore Our Curated Collection of Fresh Blossoms and Gifts with
+            <p className="mt-4 text-2xl text-primary">
+              Explore Our Curated Collection of<br/>
+               Fresh Blossoms and Gifts with<br/>
               Your Lovely Moments
             </p>
 
-            <button className="mt-6 px-6 py-3 bg-pink-700 text-white rounded-full hover:bg-pink-900 transition">
+            <button className="mt-6 px-6 py-3 bg-primary text-white rounded-md hover:bg-pink-900 transition">
               EXPLORE NOW
             </button>
           </div>
 
           {/* Right Side Image */}
           <div className="flex justify-center">
-            <div className="rounded-3xl bg-pink-600 p-4">
+            <div className="rounded-3xl bg-secondary p-4">
               <img
-                src="/hero-girl.png"
-                alt="Flower Girl"
-                className="rounded-3xl h-[340px] object-cover"
+                src={Girlimage}
+                alt="Girl"
+                className="w-full h-full object-cover rounded-3xl"
               />
             </div>
           </div>
