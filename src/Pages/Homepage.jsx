@@ -14,7 +14,7 @@ export default function Homepage() {
       {/* ----------------------------------------------------
           HERO SECTION
       ----------------------------------------------------- */}
-      <div className="w-full bg-pink-100 py-12 px-6 md:px-16">
+      <div className="w-full bg-secondary py-12 px-6 md:px-16">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">
           
           {/* Left Side */}

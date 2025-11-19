@@ -6,7 +6,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
 
         {/* Logo */}
-        <h1 className="text-3xl font-semibold text-pink-700">blossoms</h1>
+        <h1 className="text-3xl font-semibold text-primary ">blossoms</h1>
 
         {/* Search Bar */}
         <div className="flex items-center w-1/2">
