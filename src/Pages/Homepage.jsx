@@ -6,7 +6,7 @@ export default function Homepage() {
     { img: "/flowers1.jpg", title: "Pink Shaded White Rose Bouquet", price: 3200 },
     { img: "/flowers1.jpg", title: "Pink Shaded White Rose Bouquet", price: 3200 },
     { img: "/flowers1.jpg", title: "Pink Shaded White Rose Bouquet", price: 3200 },
-    { img: "/flowers1.jpg", title: "Pink Shaded White Rose Bouquet", price: 3200 },
+    
   ];
 
   return (
@@ -55,16 +55,16 @@ export default function Homepage() {
       {/* ----------------------------------------------------
           TODAY OFFERS SECTION
       ----------------------------------------------------- */}
-      <div className="max-w-7xl mx-auto px-6 py-12">
-        <h2 className="text-center text-2xl font-bold mb-8">Today Offers</h2>
+      <div className=" w-full bg-white py-12 px-4  ">
+        <h2 className="text-center text-2xl font-bold mb-8  ">Today Offers</h2>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 items-center gap-10 mx-auto px-10  ">
 
           {/* Romantic Offers Box */}
-          <div className="border p-6 rounded-xl shadow-sm">
-            <h3 className="text-xl font-semibold text-pink-700 mb-4">Romantic Offers</h3>
+          <div className="border p-6 rounded-xl shadow-sm ">
+            <h3 className="text-xl font-semibold text-primary mb-4 text-center">Romantic Offers</h3>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {products.map((p, i) => (
                 <div
                   key={i}
@@ -76,12 +76,12 @@ export default function Homepage() {
                     className="rounded-lg h-48 w-full object-cover"
                   />
                   <h2 className="mt-3 font-semibold text-gray-800">{p.title}</h2>
-                  <p className="text-pink-700 font-bold mt-1">Rs.{p.price}.00</p>
+                  <p className="text-primary font-bold mt-1">Rs.{p.price}.00</p>
 
                   <div className="flex justify-between text-sm text-gray-500 mt-3">
-                    <span>🚚 1-2 Days</span>
+                   
                     <span className="flex items-center gap-1">
-                      <FiHeart className="text-pink-600" /> 12K
+                      <FiHeart className="text-red-500" /> 1K | 100sold
                     </span>
                   </div>
                 </div>
@@ -91,9 +91,9 @@ export default function Homepage() {
 
           {/* Super Offers Box */}
           <div className="border p-6 rounded-xl shadow-sm">
-            <h3 className="text-xl font-semibold text-purple-700 mb-4">Super Offers</h3>
+            <h3 className="text-xl font-semibold text-black mb-4 text-center">Super Offers</h3>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {products.map((p, i) => (
                 <div
                   key={i}
@@ -105,12 +105,12 @@ export default function Homepage() {
                     className="rounded-lg h-48 w-full object-cover"
                   />
                   <h2 className="mt-3 font-semibold text-gray-800">{p.title}</h2>
-                  <p className="text-pink-700 font-bold mt-1">Rs.{p.price}.00</p>
+                  <p className="text-primary font-bold mt-1">Rs.{p.price}.00</p>
 
                   <div className="flex justify-between text-sm text-gray-500 mt-3">
-                    <span>🚚 1-2 Days</span>
+                    
                     <span className="flex items-center gap-1">
-                      <FiHeart className="text-pink-600" /> 12K
+                      <FiHeart className="text-red-500" /> 1K | 100sold
                     </span>
                   </div>
                 </div>

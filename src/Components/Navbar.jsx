@@ -1,4 +1,5 @@
 import { FiSearch, FiUser, FiShoppingCart } from "react-icons/fi";
+import  Blossoms from "../assets/blossoms.png";
 
 export default function Navbar() {
   return (
@@ -6,8 +7,13 @@ export default function Navbar() {
       <div className=" mx-auto px-10 py-3 flex items-center justify-between">
 
         {/* Logo */}
-        <h1 className="text-3xl  font-semibold text-primary ">blossoms</h1>
-
+         <div>
+          <img
+            src={Blossoms}
+            alt="Blossoms Logo"
+            className="h-10 w-auto object-contain"  // <-- FIXED SIZE
+          />
+        </div>
         <div className="relative w-1/2">
   <input
     type="text"
