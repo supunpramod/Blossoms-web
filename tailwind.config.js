@@ -12,6 +12,7 @@ export default {
         accent: "#F6EC72",
         light: "#F6F6F6",
         dark: "#0D3B4A",
+        tex: "#9F9F9F",
       },
       fontFamily: {
         sans: ["Inter", "poppins"],
