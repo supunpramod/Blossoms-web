@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 /* ---------------------- Reusable Icon Wrapper ---------------------- */
 const BaseIcon = ({ children, className }) => (
@@ -84,20 +85,23 @@ const settingItems = [
 ];
 
 /* ---------------------- Main Component ---------------------- */
-const Account = ({ isAuthenticated, onSignIn, onRegister }) => {
+const Account = ({ isAuthenticated, onRegister }) => {
+  const navigate = useNavigate(); // ✅ MUST be inside component
+
   return (
-    <div className=" bg-white overflow-hidden rounded-2xl font-sans ">
-      
+    <div className="bg-white overflow-hidden rounded-2xl font-sans">
+
       {/* Header */}
       <div className="p-6 bg-white">
         {!isAuthenticated && (
           <div className="space-y-3 pt-2">
             <button
-              onClick={onSignIn}
+              onClick={() => navigate("/login")}
               className="w-full h-10 bg-primary hover:bg-purple-700 text-white font-semibold rounded-lg text-sm shadow-md"
             >
               Sign In
             </button>
+
             <button
               onClick={onRegister}
               className="w-full h-10 bg-white border border-tex hover:bg-purple-100 text-tex font-semibold rounded-lg text-sm"
@@ -110,14 +114,16 @@ const Account = ({ isAuthenticated, onSignIn, onRegister }) => {
 
       {/* Content */}
       <div className="p-6 space-y-6 bg-white">
-        
+
         {/* Menu */}
         <div>
-          
-
           <div className="space-y-1">
             {menuItems.map(({ icon: Icon, label, href }) => (
-              <a key={label} href={href} className="flex items-center p-3 rounded-lg hover:bg-purple-50 text-gray-700 group">
+              <a
+                key={label}
+                href={href}
+                className="flex items-center p-3 rounded-lg hover:bg-purple-50 text-gray-700 group"
+              >
                 <Icon className="w-5 h-5 mr-4 text-purple-500 group-hover:text-purple-700" />
                 <span className="text-sm font-medium">{label}</span>
                 <ArrowRight />
@@ -130,8 +136,6 @@ const Account = ({ isAuthenticated, onSignIn, onRegister }) => {
 
         {/* Settings */}
         <div>
-          
-
           <div className="space-y-2">
             {settingItems.map(({ label, href }) => (
               <a
