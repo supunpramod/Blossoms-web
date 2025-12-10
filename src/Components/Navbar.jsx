@@ -4,6 +4,7 @@ import { FiUser } from "react-icons/fi";
 import Blossoms from "../assets/blossoms.png";
 import { Link } from "react-router-dom";
 import Account from "./AccountMenu";
+import ProductCategories from "./ProductCategories";
 
 // Custom hook to detect clicks outside
 const useClickOutside = (ref, callback) => {
@@ -55,6 +56,7 @@ const UserProfileDropdown = () => {
           "
         >
           <Account />
+          
         </div>
       )}
 
@@ -62,6 +64,54 @@ const UserProfileDropdown = () => {
     </div>
   );
 };
+
+
+
+const UserProfileDropdownp = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
+  const timeoutRef = useRef(null);
+
+  useClickOutside(dropdownRef, () => setIsOpen(false));
+
+  const handleMouseEnter = () => {
+    clearTimeout(timeoutRef.current);
+    setIsOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => setIsOpen(false), 200); // slight delay
+  };
+
+  return (
+    <div
+      className="relative inline-block"
+      ref={dropdownRef}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <a href="#" className="hover:text-pink-900">Products</a>
+
+      {isOpen && (
+        <div
+          className="
+            absolute right-0 mt-3 
+            w-80 min-w-max 
+            bg-white border border-gray-100 rounded-2xl 
+            shadow-xl z-50 
+            transition duration-200 ease-out
+          "
+        >
+          
+          <ProductCategories/>
+        </div>
+      )}
+
+      
+    </div>
+  );
+};
+
 
 // Main Navbar component
 export default function Navbar() {
@@ -105,7 +155,7 @@ export default function Navbar() {
         {/* Nav Links */}
         <div className="flex items-center space-x-6 text-primary font-medium">
           <a href="#" className="hover:text-pink-900">Home</a>
-          <a href="#" className="hover:text-pink-900">Products</a>
+          <a href="#" className="hover:text-pink-900"> <UserProfileDropdownp /></a>
           <Link to="/login" className="hover:text-pink-900">Login</Link>
           <a href="#" className="hover:text-pink-900">Sign In</a>
         </div>
