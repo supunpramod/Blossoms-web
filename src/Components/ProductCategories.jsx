@@ -126,7 +126,7 @@ const ProductCategories = ({ isAuthenticated, onRegister }) => {
               <a
                 key={label}
                 href={href}
-                className="flex items-center px-8 rounded-lg hover:bg-purple-50 text-gray-700 group "
+                className="flex items-center px-8 rounded-lg hover:bg-purple-50 text-[#9F9F9F] group "
               >
                
                 <span className="text-sm font-medium">{label}</span>
@@ -154,7 +154,7 @@ const ProductCategories = ({ isAuthenticated, onRegister }) => {
               <a
                 key={label}
                 href={href}
-                className="flex items-center px-8 rounded-lg hover:bg-purple-50 text-gray-700 group"
+                className="flex items-center px-8 rounded-lg hover:bg-purple-50 text-[#9F9F9F] group"
               >
                
                 <span className="text-sm font-medium ">{label}</span>
