@@ -2,6 +2,7 @@ import { FiHeart } from "react-icons/fi";
 import Girlimage from "../assets/Homepage/Girlimage.png";
 import FlowerBuque from "../assets/Homepage/FlowerBuque.png";
 import Newyear from "../assets/Homepage/Newyear.png";
+import moretolove from "../assets/Images/Gemini_Generated_Image_f64ws8f64ws8f64w.jpg";
 
 export default function HomePage() {
   const products = [
@@ -152,37 +153,35 @@ export default function HomePage() {
       {/* ----------------------------------------------------
           MORE TO LOVE
       ----------------------------------------------------- */}
-      <section className="w-full mt-16 px-6">
-        <h2 className="text-3xl font-bold text-center">More to Love</h2>
-        <p className="text-center text-gray-500 mt-2">
+      <section className="w-full bg-white py-12 mx-auto px-4 ">
+        <h2 className="text-3xl font-semibold text-center">More to Love</h2>
+        <p className="text-center text-black mt-2">
           Let Blossoms turn your moments of love into memories that glow.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-20 mt-10 py-12 mx-auto px-10 m-10">
           {Array(6).fill(0).map((_, index) => (
-            <div key={index} className="bg-white rounded-2xl shadow hover:shadow-lg transition p-4">
+            <div key={index} className="bg-white rounded-2xl shadow hover:shadow-lg transition p-5  ">
               <div className="relative">
                 <img
-                  src="/assets/flower-product.jpg"
-                  alt="Roses"
-                  className="rounded-xl w-full"
+                  src={moretolove}
+                  alt="Flower Bouquet"
+                  className="w-90 h-90 object-cover rounded-2xl"  
                 />
-                <span className="absolute top-2 right-2 bg-pink-600 text-white text-xs px-3 py-1 rounded-full">
-                  25 Medium roses
-                </span>
+                
               </div>
 
               <h3 className="mt-4 font-semibold">
                 25 Medium stemmed roses <br />
-                <span className="text-sm text-gray-400">12X | 30 Sold</span>
+                <span className="text-sm text-black font-extrabold">1.2K |</span><span className="text-sm text-zinc-900"> 30 Sold</span>
               </h3>
 
-              <p className="mt-2 text-lg font-bold text-pink-600">
+              <p className="mt-2 text-xl font-bold text-primary ">
                 Rs.6500.00{" "}
                 <span className="line-through text-gray-400 text-sm">Rs.8500.00</span>
               </p>
 
-              <p className="text-sm text-green-600 mt-1">
+              <p className="text-sm text-black mt-1">
                 Free Delivery over Rs.1000
               </p>
             </div>
