@@ -108,42 +108,41 @@ export default function HomePage() {
       {/* ----------------------------------------------------
           NEW YEAR OFFER SECTION
       ----------------------------------------------------- */}
-      <section className="w-full bg-pink-100 py-12 px-6 flex flex-col lg:flex-row items-center justify-center gap-10">
+      <section className="w-full bg-pink-100  px-10 flex flex-col lg:flex-row items-center justify-center m-5 ">
 
   {/* Left Image */}
-  <div className="flex justify-center">
-    <img
-      src={Newyear}
-      alt="New Year Offer"
-      className="
-        w-10 sm:w-72 md:w-80 lg:w-96 
-        object-contain 
-        drop-shadow-lg
-      "
-    />
-  </div>
+  <div className="flex justify-left mt-10 ">
+  <img
+    src={Newyear}
+    alt="New Year Offer"
+    className="
+      w-[900px] 
+      h-[500px] 
+      object-contain
+    "
+  />
+</div>
+
 
   {/* Right Content */}
   <div className="text-center lg:text-left max-w-xl">
-    <h1 className="text-6xl font-bold text-pink-700">2026</h1>
-    <h2 className="text-2xl font-semibold mt-1">New Year Offer</h2>
-    <p className="text-gray-600 mt-3">
-      Unlock the ultimate new year upgrade with our lovable products.
-      Enjoy <span className="font-semibold">40% off</span> on our latest New Arrivals.
+    <h1 className="text-7xl font-semibold text-primary">2026</h1>
+    <h2 className="text-2xl font-semibold mt-1 text-primary">New Year Offer</h2>
+    <p className="mt-3 text-primary">
+      Unlock the ultimate new year upgrade with our<br/> lovable products.
+      Enjoy 40% off on our latest<br></br> New Arrivals.
     </p>
 
-    {/* Timer */}
-    <div className="flex justify-center lg:justify-start gap-4 mt-6">
-      {["14 Days", "21 Hours", "21 Min", "14 Sec"].map((item, index) => (
-        <div key={index} className="bg-white shadow rounded-xl px-4 py-3">
-          <p className="font-bold text-xl">{item.split(" ")[0]}</p>
-          <p className="text-sm text-gray-500">{item.split(" ")[1]}</p>
+    <div className="flex justify-center lg:justify-start gap-4 mt-6 text-primary text-2xl">
+      {["14 Days", "21 Hours", "14 Min", ].map((item, index) => (
+        <div key={index} className="bg-white shadow rounded-md px-4 py-3">
+          <p className="font-semibold text-4xl text-primary text-center">{item.split(" ")[0]}</p>
+          <p className="text-sm text-primary text-center ">{item.split(" ")[1]}</p>
         </div>
       ))}
     </div>
 
-    {/* Button */}
-    <button className="mt-6 bg-pink-600 text-white px-6 py-3 rounded-xl shadow hover:bg-pink-700">
+    <button className="mt-6 bg-primary text-white px-6 py-3 rounded-md shadow hover:bg-pink-700">
       Get Offer!
     </button>
   </div>
@@ -153,13 +152,13 @@ export default function HomePage() {
       {/* ----------------------------------------------------
           MORE TO LOVE
       ----------------------------------------------------- */}
-      <section className="w-full bg-white py-12 mx-auto px-4 ">
+      <section className="w-full bg-white py-12 mx-auto px-4 mt-2 ">
         <h2 className="text-3xl font-semibold text-center">More to Love</h2>
         <p className="text-center text-black mt-2">
           Let Blossoms turn your moments of love into memories that glow.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-20 mt-10 py-12 mx-auto px-10 m-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-20 mt-5 py-12 mx-auto px-10 m-10">
           {Array(6).fill(0).map((_, index) => (
             <div key={index} className="bg-white rounded-2xl shadow hover:shadow-lg transition p-5  ">
               <div className="relative">
